@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวแก้ไขสร้างเกม (บนเว็บเท่านั้น)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- แถบเมนูด้านบน -->
+    <div class="top-bar">
+        <div class="logo">🎮 WebGame Editor</div>
+        <div class="menu">
+            <button onclick="newProject()">สร้างใหม่</button>
+            <button onclick="saveProject()">บันทึก</button>
+            <button onclick="preview()">ดูตัวอย่าง</button>
+            <span class="note">🔒 ทุกอย่างอยู่ในเว็บเท่านั้น — แชร์ได้แค่ลิงก์</span>
+        </div>
+    </div>
+
+    <!-- ส่วนทำงานหลัก -->
+    <div class="workspace">
+        <!-- แถบเครื่องมือซ้าย -->
+        <div class="sidebar">
+            <h4>📦 ส่วนประกอบ</h4>
+            <div class="tool-item" onclick="addItem('ตัวละคร')">ตัวละคร</div>
+            <div class="tool-item" onclick="addItem('พื้นหลัง')">พื้นหลัง</div>
+            <div class="tool-item" onclick="addItem('ศัตรู')">ศัตรู</div>
+            <div class="tool-item" onclick="addItem('ไอเทม')">ไอเทม</div>
+            <div class="tool-item" onclick="addItem('ระบบ')">ระบบต่างๆ</div>
+            <hr>
+            <h4>📝 ตัวแปร/ค่า</h4>
+            <div class="tool-item" onclick="addVar('เลเวล')">เลเวล</div>
+            <div class="tool-item" onclick="addVar('คะแนน')">คะแนน</div>
+            <div class="tool-item" onclick="addVar('เงิน')">เงิน</div>
+        </div>
+
+        <!-- พื้นที่แก้ไขตรงกลาง -->
+        <div class="editor">
+            <div class="editor-header">พื้นที่ออกแบบเกม</div>
+            <div id="canvas" class="canvas">
+                <p>ลาก/เลือกสิ่งที่ต้องการมาวางตรงนี้<br>ทุกอย่างบันทึกอยู่ในระบบเว็บเท่านั้น</p>
+            </div>
+        </div>
+
+        <!-- รายละเอียดด้านขวา -->
+        <div class="properties">
+            <h4>⚙️ คุณสมบัติ</h4>
+            <div id="propArea">เลือกวัตถุเพื่อตั้งค่า</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
